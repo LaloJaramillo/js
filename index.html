@@ -18,8 +18,8 @@
         <div class="container d-flex flex-column align-items-center justify-content-center">
             <h1 class="display-4">
                 Ejercicio de JavaScript
-                <p>Este es un párrafo creado por otro usuario<\p>
             </h1>
+            <p>Este es un párrafo creado por otro usuario</p>
             
             <p>Ingresa las palabras que desees, separadas por un salto de línea</p>
             <p>El resultado te mostrará las letras en posiciones pares y, separadas por un espacio las posiciones nones</p>
@@ -33,8 +33,71 @@
                 </div>
             </div>
 
-            <button class="btn btn-success">¡Revisado!</button>
+            <button class="btn btn-success" onclick="revisandoCadenas()">¡Revisado!</button>
         </div>
     </div>
+
+    <script>
+        /*
+        revisandoCadenas= () =>{
+            let palabras=document.getElementById(palabras).value;
+            palabras= palabras.split(/\r?\n/);
+            palabras.forEach(palabra=>{
+                let tamañoCadena=palabras.lenght;
+                let cadenaPar="";
+                let cadenaNon="";
+
+                for(let x=0; x>tamañoCadena;x++){
+                    let letra= palabra[x];
+                    if(x==0||x%2==0){
+                        cadenaPar+=letra;
+                    }
+                    else{
+                        cadenaNon+=letra;
+                    }
+                }
+
+                respuesta[palabra]=[cadenaPar, cadenaNon]
+            });
+
+            let contenedorResultado= document.getElementById('resultado');
+            contenedorResultado.innerHTML="";
+            for(let palabra in respuesta){
+                contenedorResultado.innerHTML+='Palabra ingresada '+palabra+'\n';
+                contenedorResultado.innerHTML+= 'Resultado: '+respuesta[palabra][0]+""+
+                respuesta[palabra][1]+'\n\n';           
+            }
+        }
+        */
+        revisandoCadenas = () => {
+            let respuesta = {};
+            let palabras = document.getElementById('palabras').value;
+            palabras = palabras.split(/\r?\n/);
+            palabras.forEach(palabra => {
+                let tamañoCadena = palabra.length;
+                let cadenaPar = "";
+                let cadenaNon = "";
+
+                for (let x = 0; x < tamañoCadena; x++) {
+                    let letra = palabra[x];
+                    if (x === 0 || x % 2 === 0) {
+                        cadenaPar += letra;
+                    } else {
+                        cadenaNon += letra;
+                    }
+                }
+
+                respuesta[palabra] = [cadenaPar, cadenaNon];
+            });
+
+            let contenedorResultado = document.getElementById('resultado');
+            contenedorResultado.innerHTML = "";
+            for (let palabra in respuesta) {
+                contenedorResultado.innerText += 'Palabra ingresada: ' + palabra + '\n';
+                contenedorResultado.innerHTML+= 'Resultado: '+respuesta[palabra][0]+""+
+                respuesta[palabra][1]+'\n\n';   
+            }
+
+    </script>
 </body>
 </html>
