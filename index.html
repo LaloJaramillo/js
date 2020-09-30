@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de GIT</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <div class="container-fluid">
+        <div class="container d-flex flex-column align-items-center justify-content-center">
+            <h1 class="display-4">
+                Ejercicio de JavaScript
+            </h1>
+            
+            <p>Ingresa las palabras que desees, separadas por un salto de línea</p>
+            <p>El resultado te mostrará las letras en posiciones pares y, separadas por un espacio las posiciones nones</p>
+            <p>Ejempli: Si ingresas la palabra 'hacker', el resultado será 'Hce akr'</p>
+            <p class="text-muted">PD: El 0 se toma como posicion par</p>
+
+            <div class="container d-flex flex-row align-items-center justify-content-center">
+                <textarea name="palabras" id="palabras" cols="130" rows="10"></textarea>
+                <div class="container" id="resultado">
+                    Aquí aparecerán los resultados
+                </div>
+            </div>
+
+            <button class="btn btn-success">¡Revisado!</button>
+        </div>
+    </div>
+</body>
+</html>
