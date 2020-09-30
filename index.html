@@ -38,18 +38,19 @@
     </div>
 
     <script>
-        /*
+        
         revisandoCadenas= () =>{
-            let palabras=document.getElementById(palabras).value;
+            console.log("Hola");
+            let palabras=document.getElementById('palabras').value;
             palabras= palabras.split(/\r?\n/);
             palabras.forEach(palabra=>{
                 let tamañoCadena=palabras.lenght;
                 let cadenaPar="";
                 let cadenaNon="";
 
-                for(let x=0; x>tamañoCadena;x++){
+                for(let x=0; x<tamañoCadena;x++){
                     let letra= palabra[x];
-                    if(x==0||x%2==0){
+                    if(x==0||x%2===0){
                         cadenaPar+=letra;
                     }
                     else{
@@ -66,9 +67,9 @@
                 contenedorResultado.innerHTML+='Palabra ingresada '+palabra+'\n';
                 contenedorResultado.innerHTML+= 'Resultado: '+respuesta[palabra][0]+""+
                 respuesta[palabra][1]+'\n\n';           
-            }
+            }        
         }
-        */
+        
         revisandoCadenas = () => {
             let respuesta = {};
             let palabras = document.getElementById('palabras').value;
@@ -97,7 +98,8 @@
                 contenedorResultado.innerHTML+= 'Resultado: '+respuesta[palabra][0]+""+
                 respuesta[palabra][1]+'\n\n';   
             }
-
+        }
+            
     </script>
 </body>
 </html>
